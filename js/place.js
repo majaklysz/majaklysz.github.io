@@ -50,6 +50,34 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
+//slideshow on phone
+
+let slideIndexX = 1;
+showSlidesX(slideIndex);
+
+function plusSlides(n) {
+  showSlidesX((slideIndexX += n));
+}
+
+function currentSlide(n) {
+  showSlidesX((slideIndexX = n));
+}
+
+function showSlidesX(n) {
+  let i;
+  let slidesX = document.getElementsByClassName("mySlidesX");
+  if (n > slidesX.length) {
+    slideIndexX = 1;
+  }
+  if (n < 1) {
+    slideIndexX = slidesX.length;
+  }
+  for (i = 0; i < slidesX.length; i++) {
+    slidesX[i].style.display = "none";
+  }
+  slidesX[slideIndexX - 1].style.display = "block";
+}
+
 //button for adding review
 
 function addingReview() {
