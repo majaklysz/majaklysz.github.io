@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --darkgreen: #00644c;
+  --lightgreen: #7dcfa1;
+  --ctaogarnge: #ee7558;
+  --whiteEle: #fff;
+}
+
+body {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/059/638/original/finallerror.png?1671459198");
+}
+
+.textBox {
+  margin-left: 392px;
+  margin-top: 195px;
+}
+
+.title {
+  font-size: 70px;
+  color: var(--darkgreen);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 205px;
+  font-weight: bold;
+  padding-bottom: 40px;
+}
+
+.bodyText {
+  font-size: 60px;
+  color: var(--darkgreen);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 686px;
+  height: auto;
+  font-weight: normal;
+  padding-bottom: 40px;
+}
+
+.goBack {
+  font-size: 20px;
+  color: var(--darkgreen);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 200px;
+  padding-bottom: 40px;
+}
+
+.mainPageButton {
+  font-size: 22px;
+  color: #fff;
+  background-color: #ee7558;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px 0px 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 227px;
+}
+
+.mainPageButton:hover {
+  cursor: pointer;
+  background-color: #d95a3b;
+}
+
+.errorAnimation {
+  position: fixed;
+  top: 525px;
+  left: 1093px;
+  height: 506px;
+  width: auto;
+}
+
+@media only screen and (width: 375px) {
+  body {
+    background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/059/657/original/phoneError.png?1671463539);
+  }
+  .title {
+    font-size: 30px;
+    margin-left: 80px;
+    padding-bottom: 30px;
+    font-weight: bold;
+  }
+
+  .bodyText {
+    font-size: 20px;
+    text-align: center;
+    width: 256px;
+    margin-left: auto;
+    padding-bottom: 30px;
+  }
+
+  .goBack {
+    font-size: 16px;
+    margin-left: 35px;
+    display: block;
+    padding-bottom: 20px;
+  }
+
+  .mainPageButton {
+    height: 49px;
+    width: auto;
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+  }
+
+  .idk {
+    height: 29px;
+    width: auto;
+  }
+
+  .errorAnimation {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 342px;
+    width: auto;
+    position: relative;
+    top: 47px;
+    left: 0px;
+  }
+
+  .textBox {
+    margin-top: 100px;
+    margin-left: 60px;
+    width: 256px;
+    height: auto;
+  }
+}

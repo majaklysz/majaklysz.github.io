@@ -1,0 +1,834 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --darkgreen: #00644c;
+  --lightgreen: #7dcfa1;
+  --ctaogarnge: #ee7558;
+  --whiteEle: #fff;
+  --ctadarkOrange: #d95a3b;
+}
+
+/*scrollbar custom*/
+/* width */
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #00644d41;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00644c;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7dcfa1;
+}
+
+body {
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/059/352/original/backgroundPlaceWeb.png?1671302239);
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: var(--whiteEle);
+  height: 72px;
+  z-index: 1;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.logo {
+  display: block;
+  margin-left: 7%;
+  margin-top: 0.5%;
+}
+
+.sideNav {
+  display: none;
+}
+
+.search,
+.burgerMenu,
+.minilogo {
+  display: none;
+}
+
+.searchWeb {
+  display: block;
+  position: fixed;
+  top: 2%;
+  left: 24%;
+}
+
+.homeBold {
+  display: block;
+  position: fixed;
+  top: 2%;
+  right: 40%;
+}
+
+.favWeb {
+  display: block;
+  position: fixed;
+  top: 2%;
+  right: 29%;
+}
+
+.addWeb {
+  display: block;
+  position: fixed;
+  top: 2%;
+  right: 15%;
+}
+.account {
+  display: block;
+  position: fixed;
+  top: 2%;
+  right: 7%;
+}
+
+/*Slideshow*/
+* {
+  box-sizing: border-box;
+}
+
+.mySlides {
+  display: none;
+  margin-top: 150px;
+}
+
+.roundedcorners {
+  border-radius: 20px;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.slideshow-container {
+  max-width: 963px;
+  position: relative;
+  margin: auto;
+  display: block;
+}
+
+.slideshow-containerX {
+  display: none;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 5px;
+  background-color: #00644c;
+  border-radius: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #00644d3d;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #00644dd0;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*content under photo*/
+
+.contentPlace {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 943px;
+  margin-top: 23px;
+}
+
+.mainType {
+  margin-left: 358px;
+}
+
+.starsRating {
+  vertical-align: unset;
+  margin: 20px 0;
+}
+
+.bodyText {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.linkWeb {
+  font-size: 20px;
+  color: #00644c;
+}
+
+.linkWeb:hover {
+  cursor: pointer;
+}
+
+.addPhotos {
+  color: #fff;
+  background-color: #ee7558;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+.addPhotos:hover {
+  background-color: var(--ctadarkOrange);
+  cursor: pointer;
+}
+
+.caffeeName {
+  font-size: 30px;
+}
+
+.map {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 943px;
+}
+
+.addressCaffee {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 943px;
+  margin-top: 50px;
+  font-size: 30px;
+}
+
+.mapCaffee {
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+.fox {
+  vertical-align: unset;
+  margin-left: 167px;
+}
+
+.reviewBox {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1184px;
+  margin-top: 80px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ymlBox {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1231px;
+  margin-top: 80px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.scrollGroupReview {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+}
+
+.scrollGroupYML {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+}
+
+.reviewHeadline {
+  margin-left: 17px;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.seeMore {
+  color: #00644d;
+  text-align: right;
+  margin-right: -84px;
+  margin-bottom: 150px;
+}
+
+/*Star rating*/
+
+.rate {
+  float: left;
+  height: 46px;
+}
+.rate:not(:checked) > input {
+  position: absolute;
+  display: none;
+}
+.rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+.rate:not(:checked) > label:before {
+  content: "★ ";
+}
+.rate > input:checked ~ label {
+  color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+/*add rewiev flex*/
+
+.addReview {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border: 1px solid var(--darkgreen);
+  border-radius: 20px;
+  box-shadow: 3px 10px 9px rgb(0 0 0 / 16%);
+  width: 722px;
+  height: 328px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+}
+
+.move {
+  margin-left: 50px;
+  margin-top: 8px;
+}
+
+.accountReview {
+  text-align: center;
+  margin-top: 49px;
+  margin-left: 45px;
+  font-size: 20px;
+}
+
+.titleStars {
+  color: #00644da4;
+  margin-top: 30px;
+}
+
+#writeReview {
+  border: 1px solid var(--darkgreen);
+  border-radius: 20px;
+  width: 351px;
+  height: 150px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
+.nameReview {
+  margin-top: 15px;
+}
+
+.addReviewButton {
+  color: #fff;
+  background-color: #ee7558;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 50px;
+  text-align: center;
+  margin-left: 46%;
+}
+
+.addReviewButton:hover {
+  cursor: pointer;
+  background-color: #d95a3b;
+}
+
+/*Footer*/
+
+footer {
+  height: 403px;
+  background-color: #00644c;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.icons,
+.som,
+.addresX {
+  display: none;
+}
+
+.footerMap {
+  border-radius: 20px;
+  margin-top: -136px;
+  margin-left: 314px;
+}
+
+.contact {
+  padding-top: 65px;
+  margin-bottom: 30px;
+}
+
+.menu,
+.address {
+  margin-bottom: 30px;
+  padding-top: 65px;
+}
+
+.iconsW {
+  padding-bottom: 20px;
+  display: block;
+}
+
+.contactWeb {
+  display: flex;
+  flex-direction: column;
+}
+
+.content,
+.menuListF {
+  display: flex;
+  flex-direction: row;
+}
+
+.menuListF {
+  gap: 60px;
+  width: 302px;
+}
+
+.space {
+  padding-left: 27px;
+}
+
+.somWeb {
+  display: block;
+  position: relative;
+  height: 50px;
+  top: 273px;
+  width: 130px;
+  right: 1656px;
+}
+
+.addressWeb {
+  display: block;
+}
+
+.contactBox,
+.menuBox,
+.addressBox {
+  margin-left: 170px;
+}
+.addressBox {
+  margin-left: 232px;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (width: 375px) {
+  body {
+    background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/059/604/original/backgroundPlaceX.png?1671440537);
+  }
+
+  .logo,
+  .searchWeb,
+  .homeBold,
+  .favWeb,
+  .addWeb,
+  .account,
+  .welcomeImg,
+  .somWeb,
+  .accoundWidget,
+  .supriseButton,
+  .filterWeb,
+  .slideshow-container {
+    display: none;
+  }
+
+  .icons,
+  .som,
+  .addresX {
+    display: block;
+  }
+  .search,
+  .burgerMenu,
+  .minilogo {
+    display: block;
+  }
+
+  .minilogo {
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+
+  #navbar {
+    overflow: hidden;
+    background-color: var(--whiteEle);
+    height: 83px;
+    z-index: 1;
+  }
+
+  .sideNav {
+    height: 100%;
+    width: 55%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    margin-left: 167px;
+    background-color: var(--whiteEle);
+    border: 1px solid var(--darkgreen);
+    display: none;
+  }
+
+  .menuList {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sign,
+  .home,
+  .favorite,
+  .add,
+  .suprise {
+    padding: 15px;
+    border: 1px solid var(--darkgreen);
+  }
+
+  .suprise {
+    background-color: #ee7658dc;
+  }
+
+  .menuTitle {
+    padding: 15px;
+    color: #00644c;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .xbutton {
+    margin-left: 162px;
+    position: fixed;
+    top: 40px;
+  }
+
+  .search {
+    display: unset;
+    margin-left: 25px;
+    margin-bottom: 8px;
+    position: relative;
+    bottom: 33px;
+    left: 90px;
+  }
+
+  .burgerMenu {
+    display: block;
+    margin-bottom: 12px;
+    margin-left: 123px;
+    position: relative;
+    top: -61px;
+    left: 196px;
+  }
+
+  .reviewBox,
+  .ymlBox {
+    overflow: hidden;
+  }
+
+  .addReview {
+    width: 270px;
+    height: 413px;
+    flex-direction: column;
+    margin-top: -83px;
+  }
+
+  .layla {
+    height: 96px;
+    width: auto;
+  }
+
+  .accountReview {
+    margin-left: 0px;
+    margin-top: 23px;
+  }
+
+  .titleStars {
+    display: none;
+  }
+
+  .rate {
+    margin-left: 40px;
+    margin-top: -4px;
+    margin-bottom: 5px;
+  }
+
+  .addReviewButton {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-size: 16px;
+  }
+
+  .move {
+    margin-left: 21px;
+  }
+
+  .mapCaffee {
+    border-radius: unset;
+    height: 376px;
+    width: 375px;
+  }
+
+  footer {
+    height: 935px;
+  }
+
+  .iconsW,
+  .addressWeb {
+    display: none;
+  }
+
+  .contact {
+    padding-top: 65px;
+    margin-bottom: 30px;
+  }
+
+  .menu,
+  .address {
+    margin-bottom: 30px;
+  }
+  .contactBox,
+  .menuBox,
+  .addressBox {
+    margin-left: 35px;
+  }
+
+  .icons {
+    padding-bottom: 20px;
+  }
+
+  .menuListF {
+    width: 302px;
+    gap: unset;
+  }
+
+  .space {
+    padding-left: 27px;
+  }
+
+  .som {
+    margin-left: 35px;
+  }
+
+  .contact {
+    display: block;
+    padding-top: 65px;
+    margin-bottom: 30px;
+  }
+  .content {
+    display: unset;
+  }
+
+  .footerMap {
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 90px;
+    margin-left: unset;
+  }
+
+  .mainType {
+    margin-left: auto;
+  }
+
+  .menu,
+  .address {
+    padding-top: unset;
+  }
+
+  .fox {
+    height: 87px;
+    width: 87px;
+    margin-top: 25px;
+    margin-left: 258px;
+  }
+
+  #writeReview {
+    width: 228px;
+    height: 150px;
+  }
+
+  /*slideshowX*/
+  .slideshow-containerX {
+    max-width: 375px;
+    position: relative;
+    margin: auto;
+  }
+
+  .roundedcorners {
+    border-radius: 0px;
+  }
+
+  .mySlides {
+    margin-top: 85px;
+  }
+
+  .dot {
+    display: none;
+  }
+
+  /*content under photos*/
+
+  .contentPlace {
+    margin-left: 25px;
+  }
+
+  .caffeeName {
+    font-size: 20px;
+    margin-top: -25px;
+  }
+
+  .contentPlace {
+    width: 324px;
+    font-size: 20px;
+  }
+
+  .mainType {
+    height: 30px;
+    width: auto;
+    margin-top: 15px;
+    margin-left: 182px;
+  }
+
+  .starsRating {
+    height: 30px;
+    width: auto;
+    margin-top: -28px;
+  }
+
+  .linkWeb {
+    font-size: 16px;
+  }
+
+  .addPhotos {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-size: 16px;
+  }
+
+  .addressCaffee {
+    font-size: 20px;
+    margin-left: 25px;
+  }
+
+  .plusAdd {
+    width: auto;
+    height: 16px;
+    margin-right: 9px;
+    margin-top: -4px;
+  }
+
+  .reviewHeadline {
+    font-size: 20px;
+    margin-left: 25px;
+  }
+  .scrollGroupReview,
+  .scrollGroupYML {
+    gap: 0px;
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 375px;
+  }
+
+  .seeMore {
+    text-align: left;
+    margin-left: 25px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .reviewBox {
+    margin-top: 0px;
+  }
+}
