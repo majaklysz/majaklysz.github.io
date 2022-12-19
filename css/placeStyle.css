@@ -743,6 +743,7 @@ footer {
     max-width: 375px;
     position: relative;
     margin: auto;
+    display: block;
   }
 
   .roundedcorners {
