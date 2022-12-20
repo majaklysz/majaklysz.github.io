@@ -58,7 +58,6 @@ body {
   margin-left: 123px;
 }
 
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
   position: fixed;
   top: 0;
