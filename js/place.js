@@ -55,11 +55,11 @@ function showSlides(n) {
 let slideIndexX = 1;
 showSlidesX(slideIndex);
 
-function plusSlides(n) {
+function plusSlidesX(n) {
   showSlidesX((slideIndexX += n));
 }
 
-function currentSlide(n) {
+function currentSlideX(n) {
   showSlidesX((slideIndexX = n));
 }
 

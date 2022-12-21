@@ -533,6 +533,22 @@ footer {
     display: none;
   }
 
+  .prevX,
+  .nextX {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
   .icons,
   .som,
   .addresX {
