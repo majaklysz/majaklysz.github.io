@@ -30,6 +30,7 @@ const goTo = (url) => {
     gap: 40px
     display: flex
     margin-top: 32px
+    margin-bottom: 10%
     align-items: center
     flex-direction: column
 
@@ -53,7 +54,7 @@ const goTo = (url) => {
     justify-content: center
     transition: transform 0.3s ease-out
     border: 1px solid rgba(158, 171, 255, 0.2)
-    background: linear-gradient(180deg, rgba(163, 197, 255, 0.13), rgba(255,255,255,0))
+    background: linear-gradient(180deg, rgb(9 31 70), rgb(3 7 29))
 
     &:hover
         box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1)

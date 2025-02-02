@@ -1,39 +1,20 @@
 <script setup lang="ts">
-import {useRouter} from "vue-router";
-import {ref, onMounted, onUnmounted} from "vue";
+import {ref, onMounted, onUnmounted, computed} from "vue";
+import {useRouter, useRoute} from "vue-router";
 import MK from "../components/icons/MK.vue";
 
 const router = useRouter();
+const route = useRoute();
+
 const isScrolled = ref(false);
 const activeSection = ref("");
 
-const goToHome = () => {
-  window.scrollTo({top: 0, behavior: "smooth"});
-};
-
-const scrollToSection = (sectionId) => {
-  const section = document.getElementById(sectionId);
-  if (section) {
-    section.scrollIntoView({behavior: "smooth"});
-  } else {
-    router.push("/").then(() => {
-      setTimeout(() => {
-        const section = document.getElementById(sectionId);
-        if (section) section.scrollIntoView({behavior: "smooth"});
-      }, 300);
-    });
-  }
-};
+const sections = ["projects", "about", "contact"];
 
 const handleScroll = () => {
-  isScrolled.value = window.scrollY > 50;
-  updateActiveSection();
-};
+  isScrolled.value = window.scrollY > 10;
 
-const updateActiveSection = () => {
-  const sections = ["projects", "about", "contact"];
   let foundSection = "";
-
   for (const section of sections) {
     const el = document.getElementById(section);
     if (el) {
@@ -44,13 +25,29 @@ const updateActiveSection = () => {
       }
     }
   }
-
-  if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 10) {
-    foundSection = "contact";
-  }
-
   activeSection.value = foundSection;
 };
+
+const scrollToSection = (id: string) => {
+  if (route.name !== "ProjectView") {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({behavior: "smooth", block: "start"});
+    }
+  }
+};
+
+const goToHome = () => {
+  if (route.path === "/") {
+    window.scrollTo({top: 0, behavior: "smooth"});
+  } else {
+    router.push("/");
+  }
+};
+
+const computedActiveSection = computed(() => {
+  return route.name === "project" ? null : activeSection.value;
+});
 
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
@@ -63,16 +60,16 @@ onUnmounted(() => {
 
 <template lang="pug">
 nav.nav-box(:class="{ 'scrolled': isScrolled }")
-    .nav-box__element(@click="goToHome", :class="{ 'active': activeSection === '' }") Home
+    .nav-box__element(@click="goToHome", :class="{ 'active': computedActiveSection === '' }") Home
     .dot
-    .nav-box__element(@click="scrollToSection('projects')", :class="{ 'active': activeSection === 'projects' }") Projects
+    .nav-box__element(@click="scrollToSection('projects')", :class="{ 'active': computedActiveSection === 'projects' }") Projects
     .dot
     .nav-box__element(@click="goToHome") 
         MK
     .dot
-    .nav-box__element(@click="scrollToSection('about')", :class="{ 'active': activeSection === 'about' }") About Me
+    .nav-box__element(@click="scrollToSection('about')", :class="{ 'active': computedActiveSection === 'about' }") About Me
     .dot
-    .nav-box__element(@click="scrollToSection('contact')", :class="{ 'active': activeSection === 'contact' }") Contact
+    .nav-box__element(@click="scrollToSection('contact')", :class="{ 'active': computedActiveSection === 'contact' }") Contact
 </template>
 
 <style lang="sass" scoped>
@@ -90,7 +87,7 @@ nav.nav-box(:class="{ 'scrolled': isScrolled }")
   justify-content: center
   width: 100%
   top: 0
-  transition: background 0.3s ease-in-out
+  transition: background 0.15s ease-in-out
 
   &.scrolled
     background: var(--dark-blue)
@@ -102,11 +99,7 @@ nav.nav-box(:class="{ 'scrolled': isScrolled }")
     line-height: 45px
     transition: color 0.3s
 
-    &:hover
-      color: var(--orange)
-      font-weight: 600
-
-    &.active
+    &:hover, &.active
       color: var(--orange)
       font-weight: 600
 

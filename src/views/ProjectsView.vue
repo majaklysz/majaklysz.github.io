@@ -4,6 +4,8 @@ import {useRoute} from "vue-router";
 import {database} from "../firebaseConfig";
 import {ref as dbRef, get} from "firebase/database";
 import ButtonComponent from "../components/ButtonComponent.vue";
+import ContactBox from "../components/ContactBox.vue";
+import Decor from "../components/icons/Decor.vue";
 
 interface Project {
   id: string;
@@ -57,6 +59,12 @@ onMounted(async () => {
             .title Skills Gained and Applied
             .skills
                 .skill(v-for="skill in project.skills" :key="skill") {{ skill }}
+ContactBox
+.decor-one
+    Decor
+.decor-two
+    Decor
+
 
 </template>
 
@@ -135,4 +143,21 @@ onMounted(async () => {
     display: flex
     flex-direction: column
     font-size: 18px
+
+.decor-one, .decor-two
+    position: absolute
+    width: 150px
+    height: auto
+    opacity: 0.7
+    z-index: 0
+    pointer-events: none
+
+.decor-one
+    top: -70vh
+    right: 130vw
+
+.decor-two
+    top: 100vh
+    left: 75vw
+    z-index: 0
 </style>

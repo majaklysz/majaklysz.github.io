@@ -2,7 +2,7 @@
 import HeroSection from "../components/HeroSection.vue";
 import CardsComposition from "../components/CardsComposition.vue";
 import AboutMe from "../components/AboutMe.vue";
-import Contact from "../components/Contact.vue";
+import ContactBox from "../components/ContactBox.vue";
 import Decor from "../components/icons/Decor.vue";
 </script>
 
@@ -15,7 +15,7 @@ import Decor from "../components/icons/Decor.vue";
         #about
             AboutMe
         #contact
-            Contact
+            ContactBox
 .decor-one
     Decor
 .decor-two
@@ -32,7 +32,7 @@ import Decor from "../components/icons/Decor.vue";
     margin: 0 10%
     display: flex
     flex-direction: column
-    margin-bottom: 15%
+    margin-bottom: 10%
     position: relative
     z-index: 2
 
@@ -44,7 +44,7 @@ import Decor from "../components/icons/Decor.vue";
     width: 150px
     height: auto
     opacity: 0.7
-    z-index: 1
+    z-index: 0
     pointer-events: none
 
 .decor-one
@@ -53,5 +53,6 @@ import Decor from "../components/icons/Decor.vue";
 
 .decor-two
     top: 250vh
-    right: 130vw
+    right: 135vw
+    z-index: 0
 </style>

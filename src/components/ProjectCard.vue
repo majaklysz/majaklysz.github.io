@@ -36,7 +36,7 @@ const typeClass = computed(() => {
   flex-direction: column
   justify-content: flex-end
   border: 1px solid rgba(158, 171, 255, 0.2)
-  background: linear-gradient(180deg, rgba(163, 197, 255, 0.13), rgba(255,255,255,0))
+  background: linear-gradient(180deg, rgb(9 31 70), rgb(3 7 29))
   transition: transform 0.3s ease-out
 
   &__details
@@ -82,7 +82,7 @@ const typeClass = computed(() => {
   transition: transform 0.3s ease-out
 
 .card:hover .phone-image
-  transform: translateY(-40px) scale(1.05)
+  transform: translateY(-40px) scale(1.08)
 
 .card:hover .laptop-image
   transform: translateX(-5px) scale(1.08)

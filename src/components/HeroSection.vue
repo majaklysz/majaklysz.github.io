@@ -29,7 +29,7 @@ import DoubleArrowIcon from "../components/icons/DoubleArrowIcon.vue";
     justify-content: center
     background-position: center
     background-repeat: no-repeat
-    background-image: linear-gradient(0deg, #00071F 1%, rgba(0, 7, 31, 0) 15%), url('public/images/mountains.svg')
+    background-image: linear-gradient(0deg, #00071F 1%, rgba(0, 7, 31, 0) 15%), url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/156/421/original/pexels-mark-soetebier-9896288.png?1738516855')
 
 .hero-box
     gap: 8px
