@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {ref, onMounted, onUnmounted, computed} from "vue";
+import {ref, onMounted, onUnmounted, computed, watch} from "vue";
 import {useRouter, useRoute} from "vue-router";
 import MK from "../components/icons/MK.vue";
 
@@ -29,7 +29,17 @@ const handleScroll = () => {
 };
 
 const scrollToSection = (id: string) => {
-  if (route.name !== "ProjectView") {
+  if (route.path !== "/") {
+    // Navigate home first, then scroll after page loads
+    router.push("/").then(() => {
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({behavior: "smooth", block: "start"});
+        }
+      }, 300);
+    });
+  } else {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({behavior: "smooth", block: "start"});
@@ -38,12 +48,24 @@ const scrollToSection = (id: string) => {
 };
 
 const goToHome = () => {
-  if (route.path === "/") {
-    window.scrollTo({top: 0, behavior: "smooth"});
-  } else {
-    router.push("/");
-  }
+  router.push("/").then(() => {
+    window.scrollTo(0, 0); // Instantly scroll to the top
+  });
 };
+
+const goToProject = () => {
+  router.push("/project").then(() => {
+    window.scrollTo(0, 0);
+  });
+};
+
+// Ensure scroll resets when switching routes
+watch(
+  () => route.path,
+  () => {
+    window.scrollTo(0, 0);
+  }
+);
 
 const computedActiveSection = computed(() => {
   return route.name === "project" ? null : activeSection.value;

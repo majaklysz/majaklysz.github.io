@@ -44,7 +44,7 @@
         img
             border-radius: 8px
             border: 1px solid rgba(158, 171, 255, 0.2)
-            max-width: 500px
+            max-width: 400px
 
 .highlight
     color: var(--orange)

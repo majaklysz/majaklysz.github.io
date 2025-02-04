@@ -29,7 +29,7 @@ import Decor from "../components/icons/Decor.vue";
     overflow: hidden
 
 .content
-    margin: 0 10%
+    margin: 0 8%
     display: flex
     flex-direction: column
     margin-bottom: 10%
