@@ -48,5 +48,4 @@ const buttonData = computed(
   height: 20px
 
 +screen-is-xs
-  .button
 </style>
