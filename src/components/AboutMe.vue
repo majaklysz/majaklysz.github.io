@@ -1,4 +1,3 @@
-<script setup></script>
 <template lang="pug">
 .about
     .about__left
@@ -11,11 +10,11 @@
                 span.highlight amazing 
                 | together!
     .about__right
-        img(src="../../public/images/MePhoto.png")
+        img(src="/images/MePhoto.png")
 </template>
 
 <style lang="sass" scoped>
-@import "../assets/main.sass"
+@import "../assets/screen.sass"
 
 .about
     gap: 80px
@@ -23,6 +22,7 @@
     padding: 0 40px
     margin-top: 32px
     align-items: center
+    flex-direction: row
     justify-content: space-between
 
     &__left
@@ -41,11 +41,45 @@
     &__right
         display: flex
         justify-content: center
+
         img
             border-radius: 8px
             border: 1px solid rgba(158, 171, 255, 0.2)
-            max-width: 400px
+            max-width: 25vw
 
 .highlight
     color: var(--orange)
+
++screen-is-xs
+    .about
+        gap: 32px
+        padding: 0
+        margin-top: 16px
+        flex-direction: column-reverse
+
+        &__left
+            max-width: 600px
+            text-align: left
+
+            .title
+                font-size: 24px
+                margin-bottom: 15px
+
+            .text
+                font-size: 16px
+
+        &__right
+            img
+                max-width: 300px
+
++screen-is-md
+    .about
+        gap: 32px
+        padding: 0
+        margin-top: 16px
+        flex-direction: column-reverse
+
+        &__right
+            img
+                max-width: 300px
 </style>

@@ -36,56 +36,63 @@ onMounted(async () => {
 </script>
 
 <template lang="pug">
-.project-view(v-if="project")
-    img.mockup(:src="project.mockupImageUrl" :alt="project.name")
-    .details
-        .headline
-            .name {{ project.name }}
-            .buttons
-                ButtonComponent(v-for="button in project.buttons" 
-                    :key="Object.keys(button)[0]"
-                    :name="Object.keys(button)[0]"
-                    :url="Object.values(button)[0]"
-                )
-        .overview 
-            .title Overview
-            .overview__text {{ project.overview }}
-        .box
-            .title Challenges and Solutions
-            .challenges
-                .challenge(v-for="challenge in project.challenges" :key="challenge") 
-                    li {{ challenge }}
-        .box
-            .title Skills Gained and Applied
-            .skills
-                .skill(v-for="skill in project.skills" :key="skill") {{ skill }}
-ContactBox
-.decor-one
-    Decor
-.decor-two
-    Decor
+.view(v-if="project")
+    .project-view
+        img.mockup(:src="project.mockupImageUrl" :alt="project.name")
+        .details
+            .headline
+                .name {{ project.name }}
+                .buttons
+                    ButtonComponent(v-for="button in project.buttons" 
+                        :key="Object.keys(button)[0]"
+                        :name="Object.keys(button)[0]"
+                        :url="Object.values(button)[0]"
+                    )
+            .overview 
+                .title Overview
+                .overview__text {{ project.overview }}
+            .box
+                .title Challenges and Solutions
+                .challenges
+                    .challenge(v-for="challenge in project.challenges" :key="challenge") 
+                        li {{ challenge }}
+            .box
+                .title Skills Gained and Applied
+                .skills
+                    .skill(v-for="skill in project.skills" :key="skill") {{ skill }}
 
-
+    .decor-one
+        Decor
+    .decor-two
+        Decor
+    ContactBox
 </template>
 
 <style scoped lang="sass">
-@import ../assets/main.sass
+@import "../assets/screen.sass"
+
+.view
+    z-index: 0
+    position: relative
+    overflow: hidden
 
 .project-view
-    margin: 10% auto
+    z-index: 2
+    gap: 100px
+    display: flex
     padding: 0 20px
+    font-size: 16px
     max-width: 800px
     text-align: left
+    margin: 10% auto
     line-height: 26px
-    font-size: 16px
-    display: flex
+    position: relative
     flex-direction: column
-    gap: 100px
 
 .mockup
-    display: flex
-    width: 600px
+    width: 40vw
     height: auto
+    display: flex
     margin: 0 auto
 
 .details
@@ -109,7 +116,6 @@ ContactBox
     font-weight: 700
     font-family:'Montserrat'
 
-
 .buttons
     gap: 32px
     display: flex
@@ -117,15 +123,15 @@ ContactBox
     flex-direction: row
 
 .overview
-    white-space: pre-line
-    display: flex
-    flex-direction: column
     gap: 8px
+    display: flex
+    white-space: pre-line
+    flex-direction: column
 
 .box
+    gap: 8px
     display: flex
     flex-direction: column
-    gap: 8px
 
 .challenges
     gap: 10px
@@ -159,5 +165,20 @@ ContactBox
 .decor-two
     top: 100vh
     left: 75vw
-    z-index: 0
+
+
++screen-is-xs
+    .project-view
+        gap: 50px
+        margin: 30% auto
+        padding: 0 24px
+
+    .mockup
+        width: 90vw
+
+    .headline
+        gap: 24px
+        flex-direction: column
+        .buttons
+            gap: 16px
 </style>

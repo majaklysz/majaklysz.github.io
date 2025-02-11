@@ -8,9 +8,9 @@ const props = defineProps<{name: string; url: string}>();
 
 // Map button names to their respective icons and text
 const buttonConfig = {
-  github: {text: "See Code", icon: GithubIcon},
-  figma: {text: "See Figma", icon: FigmaIcon},
-  website: {text: "See Solution", icon: GlobeIcon},
+  github: {text: "Code", icon: GithubIcon},
+  figma: {text: "Figma", icon: FigmaIcon},
+  website: {text: "Solution", icon: GlobeIcon},
 };
 
 const buttonData = computed(
@@ -25,6 +25,8 @@ const buttonData = computed(
 </template>
 
 <style scoped lang="sass">
+@import "../assets/screen.sass"
+
 .button
   gap: 16px
   color: white
@@ -44,4 +46,7 @@ const buttonData = computed(
 .icon
   width: 20px
   height: 20px
+
++screen-is-xs
+  .button
 </style>

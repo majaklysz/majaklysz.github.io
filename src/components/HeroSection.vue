@@ -7,19 +7,20 @@ import DoubleArrowIcon from "../components/icons/DoubleArrowIcon.vue";
     .hero-box
         .hero-box__position Frontend Developer | UX/UI Designer 
         .hero-box__main-title 
-            |Creating Seamless User Experiences
+            |Creating Seamless User Experiences 
             br
             |Through Code & Design
         .hero-box__name Maja Klysz
-    .project 
-        .text My Projects
-        .icon 
-            DoubleArrowIcon
+    
+    .icon 
+        DoubleArrowIcon
 </template>
 
 <style lang="sass" scoped>
+@import "../assets/screen.sass"
+
 .hero
-    width: 100%
+    width: 100vw
     height: 100vh
     display: flex
     text-align: center
@@ -37,6 +38,8 @@ import DoubleArrowIcon from "../components/icons/DoubleArrowIcon.vue";
     align-items: center
     flex-direction: column
     justify-content: center
+    padding-left: 20px
+    padding-right: 20px
 
     &__position
         font-size: 20px
@@ -52,17 +55,46 @@ import DoubleArrowIcon from "../components/icons/DoubleArrowIcon.vue";
         font-weight: 500
         font-family: 'Montserrat'
 
-.project
-    gap: 8px
-    top: 32%
-    display: flex
-    font-size: 18px
-    flex-direction: row
-    justify-content: center
-    align-items: center
-    position: relative
+
+
+@keyframes bounce
+    0%, 100%
+        transform: translateY(0)
+    50%
+        transform: translateY(-8px)
 
 .icon
+    top: 32%
     display: flex
-    align-items: center
+    position: relative
+    animation: bounce 1.5s infinite ease-in-out
+
+
++screen-is-xs
+    .hero-box
+        gap: 8px
+
+        &__position
+            font-size: 16px
+
+        &__name
+            margin-top: 8px
+            font-size: 16px
+
+        &__main-title
+            font-size: 24px
+
+    br
+        display: none
+
+    .hero
+        height: 60vh
+
+    .icon
+        display: none
+
+
++screen-is-sm
+    br
+        display: block
 </style>

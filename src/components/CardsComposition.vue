@@ -12,10 +12,12 @@ const {projects} = useProjects();
 </template>
 
 <style scoped lang="sass">
+@import "../assets/screen.sass"
+
 .cards-composition
     display: flex
-    align-items: center
     margin-top: 32px
+    align-items: center
 
 .project-grid
     display: flex
@@ -25,4 +27,11 @@ const {projects} = useProjects();
     align-items: center
     align-content: center
     justify-content: center
+
++screen-is-xs
+    .cards-composition
+        margin-top: 0
+
+    .project-grid
+        row-gap: 30px
 </style>

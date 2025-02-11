@@ -25,7 +25,6 @@ const typeClass = computed(() => {
 </template>
 
 <style scoped lang="sass">
-@import ../assets/main.sass
 
 .card
   width: 268px

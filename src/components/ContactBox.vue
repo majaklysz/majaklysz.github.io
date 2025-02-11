@@ -13,24 +13,27 @@ const goTo = (url) => {
     .headline Get in Touch
     .links
         .link-box(@click="goTo('mailto:klyszmaja@gmail.com')")
-            MailLink
+            .icon 
+                MailLink
             .text Mail
         .link-box(@click="goTo('https://github.com/majaklysz')")
-            GithubLink
+            .icon 
+                GithubLink
             .text GitHub
         .link-box(@click="goTo('https://www.linkedin.com/in/maja-klysz-244708251/')")
-            LinkedinLink
+            .icon 
+                LinkedinLink
             .text LinkedIn
 </template>
 
 <style lang="sass" scoped>
-@import ../assets/main.sass
+@import "../assets/screen.sass"
 
 .contact
     gap: 40px
     display: flex
     margin-top: 32px
-    margin-bottom: 10%
+    margin-bottom: 5%
     align-items: center
     flex-direction: column
 
@@ -39,7 +42,7 @@ const goTo = (url) => {
     font-family: 'Montserrat'
 
 .links
-    gap: 90px
+    gap: 32px
     display: flex
     flex-direction: row
 
@@ -47,9 +50,10 @@ const goTo = (url) => {
     gap: 24px
     display: flex
     cursor: pointer
+    width: 20vw
+    height: 30vh
     align-items: center
     border-radius: 12px
-    padding: 60px 114px
     flex-direction: column
     justify-content: center
     transition: transform 0.3s ease-out
@@ -61,10 +65,44 @@ const goTo = (url) => {
 
         .text
             color: var(--orange)
+            font-size: 24px
 
         :deep(svg path)
             fill: var(--orange) !important
 
 .text
     font-size: 24px
+
+
++screen-is-xs
+    .links
+        gap: 20px
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+
+    .link-box
+        gap: 8px
+        width: 45vw
+        height: 25vh
+
+        .text
+            font-size: 20px
+
+        .icon :deep(svg)
+            width: 40px
+            height: 40px
+
++screen-is-md
+    .link-box
+        gap: 8px
+        width: 38vw
+        height: 25vh
+
+    .text
+        font-size: 20px
+
+    .icon :deep(svg)
+        width: 40px
+        height: 40px
 </style>
