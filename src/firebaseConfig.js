@@ -11,9 +11,6 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_APP_ID,
 };
 
-// Debugging
-console.log("Firebase Config:", firebaseConfig);
-
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
