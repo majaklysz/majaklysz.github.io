@@ -37,9 +37,8 @@ jobs:
         run: ls -la ./dist
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v1
         with:
-          name: github-pages
           path: ./dist/
 
   deploy:
@@ -49,12 +48,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: github-pages
-          path: ./dist/
-
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
